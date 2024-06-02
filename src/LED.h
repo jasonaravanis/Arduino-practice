@@ -8,7 +8,12 @@ class LED {
     int pin;
 
   public:
-    LED(int p);
+
+    LED(int pinNumber, unsigned long blinkDuration, unsigned long blinkInterval);
+
+    unsigned long blinkDuration;
+
+    unsigned long blinkInterval;
 
     bool isOn();
 

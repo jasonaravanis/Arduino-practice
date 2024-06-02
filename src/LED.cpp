@@ -1,8 +1,10 @@
 #include "LED.h"
 
-LED::LED(int p) {
+LED::LED(int p, unsigned long d, unsigned long i) {
   pin = p;
   pinMode(pin, OUTPUT);
+  blinkDuration = d;
+  blinkInterval = i;
 }
 
 bool LED::isOn() {
