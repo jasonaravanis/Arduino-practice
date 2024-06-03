@@ -27,7 +27,6 @@ void updateLED(LED &led) {
     }
 
     if (led.isOn() && (millis() - previousMillis >= led.blinkDuration)) {
-      led.setPreviousMillis(millis());
       led.toggle();
     }
 }
