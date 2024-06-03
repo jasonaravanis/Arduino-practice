@@ -6,6 +6,7 @@
 class LED {
   private:
     int pin;
+    int previousMillis;
 
   public:
 
@@ -20,6 +21,12 @@ class LED {
     void on();
 
     void off();
+
+    void toggle();
+
+    void setPreviousMillis(unsigned long millis);
+
+    unsigned long getPreviousMillis();
 };
 
 #endif

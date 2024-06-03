@@ -5,6 +5,7 @@ LED::LED(int p, unsigned long d, unsigned long i) {
   pinMode(pin, OUTPUT);
   blinkDuration = d;
   blinkInterval = i;
+  previousMillis = 0;
 }
 
 bool LED::isOn() {
@@ -17,4 +18,16 @@ void LED::on() {
 
 void LED::off() {
   digitalWrite(pin, LOW);
+}
+
+void LED::toggle() {
+    digitalWrite(pin, this->isOn() ? LOW : HIGH);
+}
+
+void LED::setPreviousMillis(unsigned long millis) {
+    this->previousMillis = millis;
+}
+
+unsigned long LED::getPreviousMillis() {
+    return previousMillis;
 }
