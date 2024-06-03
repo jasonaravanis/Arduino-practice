@@ -6,7 +6,7 @@
 class LED {
   private:
     int pin;
-    int previousMillis;
+    unsigned long previousMillis;
 
   public:
 
